@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body id="home">
     <!-- * Navigation Bar -->
     <header>
       <nav>
@@ -26,7 +26,7 @@
         </div>
         <div class="link-container">
           <ul>
-            <li><a href="" class="active">Home</a></li>
+            <li><a href="#home" class="active">Home</a></li>
             <li><a href="">Dean's List</a></li>
             <li><a href="">About</a></li>
           </ul>
@@ -43,28 +43,34 @@
             <label for="student-no">Student No.</label>
             <input type="text" id="student-no" name="student-no" />
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" />
+            <input type="password" id="email" name="email" />
+            <div class="show-pass-container">
+              <label for="show-pass" class="show-pass">
+                <input type="checkbox" name="show-pass" id="show-pass" /> Show
+                Email
+              </label>
+            </div>
             <button type="submit" id="submit-btn" name="submit-btn">
               <i class="fa-solid fa-right-to-bracket"></i>
               Login
             </button>
           </fieldset>
           <fieldset class="contact">
-            <address>
-              Kasiglahan Village, San Jose, Rodriguez, Rizal
-            </address>
+            <address>Kasiglahan Village, San Jose, Rodriguez, Rizal</address>
             <div class="links">
               <a href=""><i class="fa-brands fa-facebook"></i></a>
               <a href=""><i class="fa-solid fa-envelope"></i></a>
               <a href=""><i class="fa-solid fa-globe"></i></a>
             </div>
           </fieldset>
+          <p class="copyright">
+            Copyright &copy; 2024, CdMRMS All Rights Reserved.
+          </p>
         </form>
       </div>
       <div class="background-container">
-        <img src="./img/Student.png" alt="" class="student-bg">
+        <img src="./img/Student.png" alt="" class="student-bg" />
         <p class="welcome">Welcome</p>
-        <p class="copyright">Copyright &copy; 2024, CDM Registrar Management System, All Rights Reserved.</p>
       </div>
     </main>
   </body>

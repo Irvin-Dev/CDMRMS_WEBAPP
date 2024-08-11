@@ -220,7 +220,6 @@ address {
 .copyright {
   text-align: center;
   font: normal 0.8rem var(--poppins);
-
   padding: 30px 0;
   color: var(--primary);
 }
@@ -253,7 +252,7 @@ address {
   nav {
     border: none;
   }
- 
+
   .check-btn {
     display: block;
     font-size: 2rem;
@@ -271,8 +270,8 @@ address {
     background-color: white;
     clear: right;
     margin: 0;
-   border:  solid rgb(128, 128, 128, 0.5);
-   border-width: 1px 0;
+    border: solid rgb(128, 128, 128, 0.5);
+    border-width: 1px 0;
     transition: all 0.3s;
   }
 
@@ -339,12 +338,88 @@ address {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   /* * Navigation Bar */
-  .logo-container {
-    width: 50%;
-    justify-content: left;
+
+  nav {
+    border: none;
   }
 
-  .link-container {
+  .check-btn {
+    display: block;
+    font-size: 2rem;
+    float: right;
+    margin-right: 20px;
+    color: var(--primary);
+    transition: color 0.3s ease;
+  }
+
+  ul {
+    position: fixed;
+    top: 55px;
+    right: -100%;
+    width: 100%;
+    background-color: white;
+    clear: right;
+    margin: 0;
+    border: solid rgb(128, 128, 128, 0.5);
+    border-width: 1px 0;
+    transition: all 0.3s;
+  }
+
+  #check:checked ~ ul {
+    right: 0;
+  }
+
+  #check:checked ~ .check-btn {
+    color: var(--secondary);
+  }
+
+  ul li {
+    width: 100%;
+    clear: left;
+    text-align: center;
+    line-height: 55px;
+    margin: 0;
+    list-style: none;
+  }
+
+  ul li a {
+    text-align: center;
+    text-decoration: none;
+    font: bold 1rem var(--poppins);
+    color: var(--primary);
+    transition: color 0.3s ease-out;
+  }
+
+  ul li a:hover {
+    color: var(--secondary);
+  }
+
+  .active {
+    border-bottom: 4px solid var(--secondary);
+    padding: 3px 0;
+  }
+
+  /* * Home Section */
+
+  .login-form-container {
+    min-width: 100%;
+    padding: 60px 50px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .input-field {
+    padding: 20px 30px 0;
+    width: 100%;
+  }
+
+  label {
+    font: normal 0.8rem var(--poppins);
+  }
+
+  .background-container {
     display: none;
   }
 }
@@ -352,12 +427,89 @@ address {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   /* * Navigation Bar*/
-  .logo-container {
-    justify-content: left;
+  nav {
+    border: none;
   }
 
-  .link-container {
+  .check-btn {
     display: none;
+    font-size: 2rem;
+    float: right;
+    margin-right: 20px;
+    color: var(--primary);
+    transition: color 0.3s ease;
+  }
+
+  ul {
+    width: unset;
+    position: static;
+    float: right;
+    margin: 0 50px;
+    background-color: transparent;
+    border: none;
+    transition: none;
+  }
+
+  ul li {
+    width: unset;
+    clear: none;
+    float: left;
+    line-height: 55px;
+    margin: 0 20px;
+    list-style: none;
+  }
+
+  ul li a {
+    text-decoration: none;
+    font: bold 1rem var(--poppins);
+    color: var(--primary);
+    transition: color 0.3s ease-out;
+  }
+
+  .active {
+    border-bottom: 4px solid var(--secondary);
+    padding: 3px 0;
+  }
+
+  /* * Home Section */
+  main{
+    padding-right: 50px;
+  }
+
+  .login-form-container {
+    min-width: 40%;
+    padding: 60px 0;
+  }
+
+  form {
+    width: 80%;
+  }
+
+  .input-field {
+    padding: 20px 30px 0;
+    width: 100%;
+  }
+
+  label {
+    font: normal 0.8rem var(--poppins);
+  }
+
+  .background-container {
+    display: block;
+    width: 70%;
+  }
+
+  .student-bg {
+    width: 40vw;
+  }
+
+  .welcome {
+    font: bold 7vw var(--poppins);
+    color: white;
+    padding: 0 150px;
+    text-align: center;
+    border-top: 2px solid var(--secondary);
+    border-bottom: 2px solid var(--secondary);
   }
 }
 

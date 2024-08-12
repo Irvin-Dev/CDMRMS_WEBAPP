@@ -27,502 +27,167 @@
 body {
   padding-top: 55px;
 }
-/* * Navigation Bar */
+
+/* Navigation Bar */
 nav {
   width: 100%;
   height: 55px;
   background-color: white;
+
+  box-shadow: 0 1px 3px var(--shadow);
+  padding-right: 30px;
+  position: fixed;
   top: 0;
   left: 0;
-  position: fixed;
-  box-shadow: 0 1px 5px grey;
-  border-left: 15px solid var(--secondary);
 }
 
 .cdm-logo {
-  height: 55px;
   float: left;
-  margin: 0 5px;
+  height: 55px;
+  padding: 0 5px;
 }
 
 h1 {
-  line-height: 55px;
+  float: left;
   font: bold 2.5rem var(--poppins);
   color: var(--primary);
-  float: left;
+  line-height: 55px;
 }
 
 #check {
   display: none;
 }
 
-.check-btn {
-  display: none;
-}
-
 ul {
   float: right;
-  margin: 0 50px;
+  margin-right: 50px;
+  list-style: none;
 }
 
 ul li {
   float: left;
   line-height: 55px;
-  margin: 0 20px;
-  list-style: none;
+  padding: 0 20px;
 }
 
-ul li a {
+ul a {
   text-decoration: none;
-  font: bold 1rem var(--poppins);
   color: var(--primary);
-  transition: color 0.3s ease-out;
+  font: bold 1rem var(--poppins);
+  transition: color 0.3s ease-in-out;
 }
 
-ul li a:hover {
+ul a:hover {
   color: var(--secondary);
 }
 
-.active {
-  border-bottom: 4px solid var(--secondary);
-  padding: 3px 0;
-}
-
-/* * Home Section */
-main {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  background-color: var(--primary);
-}
-
-.login-form-container {
-  width: 30%;
-  min-width: 500px;
-  height: 100%;
-  padding: 60px 0;
-}
-
-form {
-  width: 400px;
-  min-height: 600px;
-  margin: 0 auto;
-  border-radius: 5px;
-  background-color: white;
-}
-
-h2 {
-  text-align: center;
-  font: bold 1.7rem var(--poppins);
-  color: var(--primary);
-  padding: 50px 0 20px;
-}
-
-.instruction {
-  text-align: center;
-  padding: 10px;
-  margin: 0 30px 20px;
-  border-radius: 5px;
-  background-color: var(--light-green);
-  font: normal 1rem var(--poppins);
-  color: var(--primary);
-}
-
-.input-field {
-  padding: 20px 0 0;
-  border: none;
-  width: 335px;
-  margin: 0 auto;
-}
-
-label {
-  margin-top: 5px;
-  display: block;
-  font: normal 1rem var(--poppins);
-}
-
-.input-field > input {
-  width: 100%;
-  padding: 10px;
-  border: 2px solid var(--whitesmoke);
-  border-radius: 5px;
-  transition: border 0.3s ease;
-}
-
-input:focus {
-  border: 2px solid var(--secondary);
-  outline: none;
-}
-
-.show-pass-container {
-  width: 100%;
-}
-
-.show-pass-label {
-  display: block;
-}
-
-input[type="checkbox"] {
-  vertical-align: middle;
-  transform: scale(1.2);
-  margin-left: 2px;
-  margin-right: 10px;
-}
-
-.show-pass {
-  margin-top: 15px;
-}
-
-#submit-btn {
+.menu-btn {
   float: right;
-  margin: 20px 0 50px;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  background-color: var(--secondary);
-  font: bold 0.8rem var(--poppins);
-  transition: background-color 0.3s ease;
-}
-
-#submit-btn:hover {
-  cursor: pointer;
-  background-color: #f1a80b;
-}
-
-#submit-btn i {
-  margin-right: 5px;
-}
-
-.contact {
-  margin: 0 30px;
-  background-color: var(--light-green);
-  border: none;
-  border-radius: 5px;
-  padding: 10px 0;
-}
-
-address {
+  display: none;
+  line-height: 57px;
+  font-size: 2rem;
   color: var(--primary);
-  text-align: center;
-  padding: 0 10px 10px;
-  font: normal 0.8rem var(--poppins);
+  padding: 0 20px;
+  transition: color 0.3s ease;
 }
 
-.links {
-  text-align: center;
-}
-.links a {
-  font-size: 1.5rem;
-  margin: 0 10px;
-  color: var(--primary);
-}
-
-.copyright {
-  text-align: center;
-  font: normal 0.8rem var(--poppins);
-  padding: 30px 0;
-  color: var(--primary);
-}
-
-.background-container {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.student-bg {
-  display: block;
-  margin: 0 auto;
-  width: 600px;
-}
-
-.welcome {
-  font: bold 7rem var(--poppins);
-  color: white;
-  padding: 0 150px;
-  border-top: 2px solid var(--secondary);
-  border-bottom: 2px solid var(--secondary);
+#check:checked ~ .menu-btn {
+  color: var(--secondary);
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  /* * Navigation Bar */
-
+  /** Navigation Bar */
   nav {
-    border: none;
-  }
-
-  .check-btn {
-    display: block;
-    font-size: 2rem;
-    float: right;
-    margin-right: 20px;
-    color: var(--primary);
-    transition: color 0.3s ease;
+    padding-right: 0;
   }
 
   ul {
-    position: fixed;
     top: 55px;
-    right: -100%;
+    left: -100%;
     width: 100%;
-    background-color: white;
-    clear: right;
-    margin: 0;
-    border: solid rgb(128, 128, 128, 0.5);
-    border-width: 1px 0;
-    transition: all 0.3s;
-  }
-
-  #check:checked ~ ul {
-    right: 0;
-    z-index: -2;
-  }
-
-  #check:checked ~ .check-btn {
-    color: var(--secondary);
+    margin-right: 0;
+    position: fixed;
+    background-color: #f0f2f5;
+    transition: left 0.3s ease;
   }
 
   ul li {
     width: 100%;
     clear: left;
     text-align: center;
-    line-height: 55px;
-    margin: 0;
-    list-style: none;
   }
 
-  ul li a {
-    text-align: center;
-    text-decoration: none;
-    font: bold 1rem var(--poppins);
-    color: var(--primary);
-    transition: color 0.3s ease-out;
+  #check:checked ~ ul {
+    left: 0;
   }
 
-  ul li a:hover {
-    color: var(--secondary);
-  }
-
-  .active {
-    border-bottom: 4px solid var(--secondary);
-    padding: 3px 0;
-  }
-
-  /* * Home Section */
-
-  .login-form-container {
-    min-width: 100%;
-    padding: 60px 10px;
-  }
-
-  form {
-    width: 100%;
-  }
-
-  .input-field {
-    padding: 20px 30px 0;
-    width: 100%;
-  }
-
-  label {
-    font: normal 0.8rem var(--poppins);
-  }
-
-  .background-container {
-    display: none;
+  .menu-btn {
+    display: block;
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  /* * Navigation Bar */
-
+  /** Navigation Bar */
   nav {
-    border: none;
-  }
-
-  .check-btn {
-    display: block;
-    font-size: 2rem;
-    float: right;
-    margin-right: 20px;
-    color: var(--primary);
-    transition: color 0.3s ease;
+    padding-right: 0;
   }
 
   ul {
-    position: fixed;
     top: 55px;
-    right: -100%;
+    left: -100%;
     width: 100%;
-    background-color: white;
-    clear: right;
-    margin: 0;
-    border: solid rgb(128, 128, 128, 0.5);
-    border-width: 1px 0;
-    transition: all 0.3s;
-  }
-
-  #check:checked ~ ul {
-    right: 0;
-  }
-
-  #check:checked ~ .check-btn {
-    color: var(--secondary);
+    margin-right: 0;
+    position: fixed;
+    background-color: #f0f2f5;
+    transition: left 0.3s ease;
   }
 
   ul li {
     width: 100%;
     clear: left;
     text-align: center;
-    line-height: 55px;
-    margin: 0;
-    list-style: none;
   }
 
-  ul li a {
-    text-align: center;
-    text-decoration: none;
-    font: bold 1rem var(--poppins);
-    color: var(--primary);
-    transition: color 0.3s ease-out;
+  #check:checked ~ ul {
+    left: 0;
   }
 
-  ul li a:hover {
-    color: var(--secondary);
-  }
-
-  .active {
-    border-bottom: 4px solid var(--secondary);
-    padding: 3px 0;
-  }
-
-  /* * Home Section */
-
-  .login-form-container {
-    min-width: 100%;
-    padding: 60px 50px;
-  }
-
-  form {
-    width: 100%;
-  }
-
-  .input-field {
-    padding: 20px 30px 0;
-    width: 100%;
-  }
-
-  label {
-    font: normal 0.8rem var(--poppins);
-  }
-
-  .background-container {
-    display: none;
+  .menu-btn {
+    display: block;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  /* * Navigation Bar*/
-  nav {
-    border: none;
-  }
+  /** Navigation Bar  */
 
-  .check-btn {
-    display: none;
-    font-size: 2rem;
-    float: right;
-    margin-right: 20px;
-    color: var(--primary);
-    transition: color 0.3s ease;
+  nav {
+    padding-right: 30px;
+    border-left: 15px solid var(--secondary);
   }
 
   ul {
-    width: unset;
     position: static;
-    float: right;
-    margin: 0 50px;
+    top: 55px;
+    width: unset;
+    margin-right: 50px;
     background-color: transparent;
-    border: none;
-    transition: none;
   }
 
   ul li {
     width: unset;
     clear: none;
-    float: left;
-    line-height: 55px;
-    margin: 0 20px;
-    list-style: none;
   }
 
-  ul li a {
-    text-decoration: none;
-    font: bold 1rem var(--poppins);
-    color: var(--primary);
-    transition: color 0.3s ease-out;
-  }
-
-  .active {
-    border-bottom: 4px solid var(--secondary);
-    padding: 3px 0;
-  }
-
-  /* * Home Section */
-  main{
-    padding-right: 50px;
-  }
-
-  .login-form-container {
-    min-width: 40%;
-    padding: 60px 0;
-  }
-
-  form {
-    width: 80%;
-  }
-
-  .input-field {
-    padding: 20px 30px 0;
-    width: 100%;
-  }
-
-  label {
-    font: normal 0.8rem var(--poppins);
-  }
-
-  .background-container {
-    display: block;
-    width: 70%;
-  }
-
-  .student-bg {
-    width: 40vw;
-  }
-
-  .welcome {
-    font: bold 7vw var(--poppins);
-    color: white;
-    padding: 0 150px;
-    text-align: center;
-    border-top: 2px solid var(--secondary);
-    border-bottom: 2px solid var(--secondary);
+  .menu-btn {
+    display: none;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  /* Navigation Bar */
-  .logo-container {
-    justify-content: left;
-  }
-
-  .link-container {
-    display: block;
-  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */

@@ -95,6 +95,146 @@ ul a:hover {
   color: var(--secondary);
 }
 
+/** View Grade Section */
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--primary);
+  display: flex;
+  padding-right: 100px;
+}
+
+.form-container {
+  width: 40%;
+  min-width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 20px;
+}
+
+.form-container form {
+  width: 400px;
+  min-height: 600px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  font: bold 2rem var(--poppins);
+  color: var(--primary);
+  padding: 20px;
+}
+
+.instruction {
+  width: 100%;
+  text-align: center;
+  font: normal 1.1rem var(--poppins);
+  color: var(--primary);
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--light-green);
+  border-radius: 5px;
+}
+
+fieldset {
+  margin-top: 30px;
+  border: none;
+  padding: 20px 0;
+}
+
+fieldset label {
+  display: block;
+  font: normal 1rem var(--poppins);
+  color: var(--primary);
+}
+
+fieldset input {
+  width: 100%;
+  padding: 7px;
+  margin-bottom: 10px;
+  border: 2px solid var(--whitesmoke);
+  border-radius: 5px;
+  background-color: rgb(245, 245, 245);
+  transition: background-color 0.3s ease;
+}
+
+fieldset input:focus {
+  outline: none;
+  border: 2px solid var(--secondary);
+  background-color: white;
+}
+
+button {
+  width: 100px;
+  margin: 20px 0;
+  padding: 7px;
+  display: block;
+  float: right;
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 5px;
+  font: normal 0.9rem var(--poppins);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #ffbb00;
+}
+
+button i {
+  padding-right: 5px;
+}
+
+.contact {
+  width: 100%;
+  background-color: var(--light-green);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+address {
+  text-align: center;
+  font: normal 0.9rem var(--poppins);
+  color: var(--primary);
+}
+
+.contact-links {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-links a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+  cursor: pointer;
+  color: var(--secondary);
+}
+
+.bg-container {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.background-img-container {
+  width: 700px;
+  height: 600px;
+  margin: auto;
+  background: var(--primary) url("./img/Student.png") no-repeat center;
+  background-size: cover;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   /** Navigation Bar */
@@ -104,12 +244,13 @@ ul a:hover {
 
   ul {
     top: 55px;
-    left: -100%;
-    width: 100%;
+    right: -100%;
+    width: 50%;
+    height: 100vh;
     margin-right: 0;
     position: fixed;
     background-color: #f0f2f5;
-    transition: left 0.3s ease;
+    transition: right 0.3s ease;
   }
 
   ul li {
@@ -119,12 +260,15 @@ ul a:hover {
   }
 
   #check:checked ~ ul {
-    left: 0;
+    right: 0;
   }
 
   .menu-btn {
     display: block;
   }
+
+  /** View Grade Section  */
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -135,13 +279,14 @@ ul a:hover {
   }
 
   ul {
+    width: 50%;
+    height: 100vh;
     top: 55px;
-    left: -100%;
-    width: 100%;
+    right: -100%;
     margin-right: 0;
     position: fixed;
     background-color: #f0f2f5;
-    transition: left 0.3s ease;
+    transition: right 0.3s ease;
   }
 
   ul li {
@@ -151,7 +296,7 @@ ul a:hover {
   }
 
   #check:checked ~ ul {
-    left: 0;
+    right: 0;
   }
 
   .menu-btn {

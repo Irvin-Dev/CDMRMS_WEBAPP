@@ -33,7 +33,6 @@ nav {
   width: 100%;
   height: 55px;
   background-color: white;
-
   box-shadow: 0 1px 3px var(--shadow);
   padding-right: 30px;
   position: fixed;
@@ -99,7 +98,13 @@ ul a:hover {
 main {
   width: 100%;
   min-height: 100vh;
-  background-color: var(--primary);
+  background: linear-gradient(
+    160deg,
+    var(--primary),
+    var(--primary),
+    rgb(69, 101, 0),
+    var(--secondary)
+  );
   display: flex;
   padding-right: 100px;
 }
@@ -110,7 +115,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: 0 20px;
 }
 
@@ -225,14 +229,21 @@ address {
   width: 60%;
   display: flex;
   justify-content: center;
+  align-self: center;
 }
 
 .background-img-container {
-  width: 700px;
-  height: 600px;
+  width: 500px;
+  height: 400px;
   margin: auto;
-  background: var(--primary) url("./img/Student.png") no-repeat center;
+  background: url("./img/Student.png") no-repeat center;
   background-size: cover;
+}
+
+.copyright {
+  text-align: center;
+  font: normal 0.8rem var(--poppins);
+  padding: 20px 0 10px;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -268,7 +279,17 @@ address {
   }
 
   /** View Grade Section  */
+  main {
+    padding-right: 0;
+  }
 
+  .form-container {
+    width: 100%;
+  }
+
+  .bg-container {
+    display: none;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -302,6 +323,25 @@ address {
   .menu-btn {
     display: block;
   }
+
+  /** View Grade Section */
+  main {
+    padding-top: 50px;
+    flex-direction: column;
+    padding-right: 0;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .form-container form {
+    width: 80%;
+  }
+
+  .bg-container {
+    display: none;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -329,12 +369,68 @@ address {
   .menu-btn {
     display: none;
   }
+
+  /** View Grade Section */
+  main {
+    padding-top: 50px;
+    flex-direction: column;
+    padding-right: 0;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .form-container form {
+    width: 80%;
+  }
+
+  .bg-container {
+    display: block;
+    width: 100%;
+  }
+
+  .background-img-container {
+    width: 450px;
+    height: 300px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  main {
+    flex-direction: row;
+    padding-right: 100px;
+  }
+
+  .form-container {
+    width: 40%;
+  }
+
+  .form-container form {
+    width: 400px;
+  }
+
+  .bg-container {
+    width: 60%;
+  }
+
+  .background-img-container {
+    margin: auto;
+    width: 600px;
+    height: 500px;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .bg-container {
+    align-items: start;
+  }
+
+  .background-img-container {
+    margin: auto;
+    width: 750px;
+    height: 650px;
+  }
 }

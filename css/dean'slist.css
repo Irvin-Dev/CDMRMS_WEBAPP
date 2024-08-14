@@ -1,0 +1,197 @@
+/* Poppins Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+
+:root {
+  --primary: #0b4d10;
+  --secondary: #ffc930;
+  --light-green: #dff0d8;
+  --whitesmoke: #b7b7b7;
+  --shadow: rgb(90, 90, 90);
+  --poppins: "Poppins", sans-serif;
+  --times-new-roman: "Times New Roman", sans-serif;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.html {
+  font-size: 62.5%;
+}
+
+body {
+  padding-top: 55px;
+}
+
+/** Navigation Bar */
+
+nav {
+  width: 100%;
+  height: 55px;
+  background-color: white;
+  box-shadow: 0 1px 3px var(--shadow);
+  padding-right: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.cdm-logo {
+  float: left;
+  height: 55px;
+  padding: 0 5px;
+}
+
+h1 {
+  float: left;
+  font: bold 2.5rem var(--poppins);
+  color: var(--primary);
+  line-height: 55px;
+}
+
+#check {
+  display: none;
+}
+
+ul {
+  float: right;
+  margin-right: 50px;
+  list-style: none;
+}
+
+ul li {
+  float: left;
+  line-height: 55px;
+  padding: 0 20px;
+}
+
+ul a {
+  text-decoration: none;
+  color: var(--primary);
+  font: bold 1rem var(--poppins);
+  transition: color 0.3s ease-in-out;
+}
+
+ul a:hover {
+  color: var(--secondary);
+}
+
+.menu-btn {
+  float: right;
+  display: none;
+  line-height: 57px;
+  font-size: 2rem;
+  color: var(--primary);
+  padding: 0 20px;
+  transition: color 0.3s ease;
+}
+
+#check:checked ~ .menu-btn {
+  color: var(--secondary);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /** Navigation Bar */
+  nav {
+    padding-right: 0;
+  }
+
+  ul {
+    top: 55px;
+    right: -100%;
+    width: 50%;
+    height: 100vh;
+    margin-right: 0;
+    position: fixed;
+    background-color: #f0f2f5;
+    transition: right 0.3s ease;
+  }
+
+  ul li {
+    width: 100%;
+    clear: left;
+    text-align: center;
+  }
+
+  #check:checked ~ ul {
+    right: 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  /** Navigation Bar */
+  nav {
+    padding-right: 0;
+  }
+
+  ul {
+    width: 50%;
+    height: 100vh;
+    top: 55px;
+    right: -100%;
+    margin-right: 0;
+    position: fixed;
+    background-color: #f0f2f5;
+    transition: right 0.3s ease;
+  }
+
+  ul li {
+    width: 100%;
+    clear: left;
+    text-align: center;
+  }
+
+  #check:checked ~ ul {
+    right: 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    /** Navigation Bar  */
+
+  nav {
+    padding-right: 30px;
+    border-left: 15px solid var(--secondary);
+  }
+
+  ul {
+    position: static;
+    top: 55px;
+    width: unset;
+    margin-right: 50px;
+    background-color: transparent;
+  }
+
+  ul li {
+    width: unset;
+    clear: none;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

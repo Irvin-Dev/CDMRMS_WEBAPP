@@ -106,7 +106,7 @@ main {
     var(--secondary)
   );
   display: flex;
-  padding: 0 100px 100px 0;
+  padding: 50px 100px 100px 0;
 
 }
 
@@ -181,7 +181,6 @@ button {
   float: right;
   background-color: var(--secondary);
   border: none;
-  border-radius: 5px;
   font: normal 0.9rem var(--poppins);
   transition: background-color 0.3s ease;
 }

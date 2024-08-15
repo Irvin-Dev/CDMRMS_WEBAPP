@@ -106,7 +106,8 @@ main {
     var(--secondary)
   );
   display: flex;
-  padding-right: 100px;
+  padding: 0 100px 100px 0;
+
 }
 
 .form-container {
@@ -122,7 +123,7 @@ main {
   width: 400px;
   min-height: 600px;
   background-color: white;
-  border-radius: 5px;
+ 
   padding: 20px;
 }
 
@@ -141,7 +142,6 @@ h2 {
   margin-top: 20px;
   padding: 10px 20px;
   background-color: var(--light-green);
-  border-radius: 5px;
 }
 
 fieldset {
@@ -160,15 +160,16 @@ fieldset input {
   width: 100%;
   padding: 7px;
   margin-bottom: 10px;
-  border: 2px solid var(--whitesmoke);
-  border-radius: 5px;
+  border: none;
+  border: 1px solid var(--primary);
+  
   background-color: rgb(245, 245, 245);
   transition: background-color 0.3s ease;
 }
 
 fieldset input:focus {
   outline: none;
-  border: 2px solid var(--secondary);
+  border: 1px solid var(--secondary);
   background-color: white;
 }
 
@@ -198,7 +199,6 @@ button i {
   width: 100%;
   background-color: var(--light-green);
   padding: 20px;
-  border-radius: 5px;
 }
 
 address {

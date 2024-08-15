@@ -6,6 +6,7 @@
   --secondary: #ffc930;
   --light-green: #dff0d8;
   --whitesmoke: #b7b7b7;
+  --light-gray: #ebebeb;
   --shadow: rgb(90, 90, 90);
   --poppins: "Poppins", sans-serif;
   --times-new-roman: "Times New Roman", sans-serif;
@@ -95,6 +96,102 @@ ul a:hover {
   color: var(--secondary);
 }
 
+/** Dean's List Section  */
+main {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    160deg,
+    var(--primary),
+    var(--primary),
+    rgb(69, 101, 0),
+    var(--secondary)
+  );
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  
+}
+
+.table-container {
+  width: 80%;
+  height: 577px;
+  background-color: white;
+  overflow-y: auto;
+}
+
+.search-container {
+  width: 100%;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border-bottom: 1px solid var(--primary);
+}
+
+#search-bar {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid var(--primary);
+}
+
+#search-bar:focus {
+  outline: none;
+}
+
+#search-btn {
+  width: 50px;
+  padding: 10px;
+  background-color: var(--primary);
+  color: white;
+  border: 1px solid var(--primary);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  border-radius: 5px;
+}
+
+#search-btn:hover {
+  cursor: pointer;
+  background-color: #ffc930;
+  border-color: var(--secondary);
+}
+
+table {
+  width: 100%;
+  height: fit-content;
+}
+
+table,
+th,
+td {
+  border: 2px solid var(--light-gray);
+  border-collapse: collapse;
+  height: 50px;
+}
+
+table th {
+  font: bold 1.1rem var(--poppins);
+  background-color: var(-);
+}
+
+tr {
+  height: 50px;
+}
+
+tbody tr {
+  text-align: center;
+  font: normal 1rem var(--poppins);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--light-gray);
+}
+
+table caption {
+  background-color: var(--secondary);
+  height: 50px;
+  font: bold 2rem var(--poppins);
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   /** Navigation Bar */
@@ -163,7 +260,7 @@ ul a:hover {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    /** Navigation Bar  */
+  /** Navigation Bar  */
 
   nav {
     padding-right: 30px;
@@ -174,6 +271,7 @@ ul a:hover {
     position: static;
     top: 55px;
     width: unset;
+    height: unset;
     margin-right: 50px;
     background-color: transparent;
   }

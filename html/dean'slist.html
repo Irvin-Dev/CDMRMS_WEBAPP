@@ -35,36 +35,43 @@
       </nav>
     </header>
     <main>
-      <section class="table-container">
-        <div class="search-container">
-          <input type="search" id="search-bar" placeholder="Search...."/>
-          <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <section class="list-container">
+        <div class="search-bar-container">
+          <div class="search-bar-wrapper">
+            <input type="search" id="search-bar" placeholder="Search...">
+            <button type="button" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
         </div>
-        <table>
-          <caption>
-            2023-2024 Dean's Listers
-          </caption>
-          <thead>
-            <tr>
-              <th>Student No.</th>
-              <th>Student Name</th>
-              <th>Program</th>
-              <th>Year</th>
-              <th>Section</th>
-              <th>GWA</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>22-00396</td>
-              <td>John Irvin C. Geanga</td>
-              <td>BSIT</td>
-              <td>2nd Year	</td>
-              <td>BSIT-2C</td>
-              <td>1.04</td>
-            </tr>
-          </tbody>
-        </table>
+       <div class="table-container">
+          <div class="table-wrapper">
+            <table>
+              <caption>2023 - 2024 Dean's Listers</caption>
+              <thead>
+                <tr>
+                  <th class="hide-first">Student No.</th>
+                  <th>Student Name</th>
+                  <th class="hide-last">Program</th>
+                  <th class="hide-last">Year</th>
+                  <th>Section</th>
+                  <th>GWA</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="hide-first">22-00396</td>
+                  <td class="name">John Irvin C. Geanga</td>
+                  <td class="hide-last">BSIT</td>
+                  <td class="hide-last">3rd</td>
+                  <td>3C</td>
+                  <td>1.39</td>
+                </tr>
+                
+                
+                
+              </tbody>
+            </table>
+          </div>
+       </div>
       </section>
     </main>
   </body>

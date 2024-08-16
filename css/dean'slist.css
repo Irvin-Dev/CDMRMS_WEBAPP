@@ -100,58 +100,76 @@ ul a:hover {
 main {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(
-    160deg,
-    var(--primary),
-    var(--primary),
-    rgb(69, 101, 0),
-    var(--secondary)
-  );
+  background: url("../img/Rect\ Light\ \(1\).svg") no-repeat center;
+  background-size: cover;
   display: grid;
   grid-template-columns: 1fr;
   place-items: center;
 }
 
-.table-container {
+.list-container {
   width: 80%;
-  height: 577px;
+  height: 600px;
   background-color: white;
-  overflow-y: auto;
+  border: 1px solid var(--primary);
 }
 
-.search-container {
+.search-bar-container {
   width: 100%;
+  height: 70px;
+  border-bottom: 1px solid;
+}
+
+.search-bar-wrapper {
+  float: right;
   padding: 20px;
-  position: sticky;
-  z-index: 1;
-  top: 0;
-  background-color: white;
-  border-bottom: 1px solid var(--primary);
 }
 
 #search-bar {
-  width: 200px;
-  padding: 10px;
-  border: 1px solid var(--primary);
-}
-
-#search-bar:focus {
-  outline: none;
+  padding: 5px;
 }
 
 #search-btn {
-  width: 50px;
-  padding: 10px;
-  background-color: var(--primary);
+  cursor: pointer;
+  padding: 5px 10px;
   color: white;
-  border: 1px solid var(--primary);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  background-color: var(--primary);
+  border: none;
+  border: 2px solid var(--primary);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 #search-btn:hover {
-  cursor: pointer;
-  background-color: #ffc930;
+  background-color: var(--secondary);
   border-color: var(--secondary);
+}
+
+.table-container {
+  height: 530px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-wrapper {
+  width: 90%;
+  height: 400px;
+  background-color: white;
+  border: 1px solid var(--primary);
+  overflow-y: auto;
+}
+
+caption {
+  width: 100%;
+  height: 57px;
+  background-color: var(--primary);
+  color: white;
+  padding: 10px;
+  font: bold 1.5rem var(--poppins);
+  position: sticky;
+  top: 0;
+  left: 0;
+  outline: 1px solid var(--primary);
 }
 
 table {
@@ -159,37 +177,35 @@ table {
   height: fit-content;
 }
 
-table,
-th,
-td {
-  border: 2px solid var(--light-gray);
-  border-collapse: collapse;
-  height: 50px;
-}
-
 table th {
-  font: bold 1.1rem var(--poppins);
-  background-color: var(-);
+  font: bold 1rem var(--poppins);
+  padding: 5px;
+}
+thead,
+th {
+  position: sticky;
+  top: 57px;
+  background-color: var(--secondary);
 }
 
-tr {
-  height: 50px;
-}
-
-tbody tr {
+table,
+td {
   text-align: center;
-  font: normal 1rem var(--poppins);
+  border: 1px solid var(--light-gray);
+  border-collapse: collapse;
+  height: 40px;
+  font: normal 0.8rem var(--poppins);
 }
 
+tbody .name {
+  padding: 0 10px;
+  max-width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 tbody tr:nth-child(odd) {
   background-color: var(--light-gray);
-}
-
-table caption {
-  background-color: var(--secondary);
-  height: 50px;
-  font: 600 2rem var(--poppins);
-  line-height: 50px;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -209,7 +225,6 @@ table caption {
     position: fixed;
     background-color: #f0f2f5;
     transition: right 0.3s ease;
-    
   }
 
   ul li {
@@ -224,6 +239,32 @@ table caption {
 
   .menu-btn {
     display: block;
+  }
+  /** Dean's List Section  */
+  .list-container {
+    width: 90%;
+  }
+
+  caption {
+    font: bold 1rem var(--poppins);
+    padding: 0;
+    line-height: 57px;
+  }
+
+  thead .hide-first {
+    display: none;
+  }
+
+  tbody .hide-first {
+    display: none;
+  }
+
+  thead .hide-last {
+    display: none;
+  }
+
+  tbody .hide-last {
+    display: none;
   }
 }
 
@@ -258,6 +299,18 @@ table caption {
   .menu-btn {
     display: block;
   }
+  /** Dean's List Section  */
+  .list-container {
+    width: 90%;;
+  }
+
+  thead .hide-first {
+    display: none;
+  }
+
+  tbody .hide-first {
+    display: none;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -286,10 +339,25 @@ table caption {
   .menu-btn {
     display: none;
   }
+
+  /** Dean's List Section  */
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+
+  .list-container {
+    width: 80%;
+  }
+
+  thead .hide-first {
+    display: block;
+  }
+
+  tbody .hide-first {
+    line-height: 40px;
+    display: block;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */

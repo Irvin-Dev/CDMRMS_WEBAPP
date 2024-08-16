@@ -98,13 +98,8 @@ ul a:hover {
 main {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(
-    160deg,
-    var(--primary),
-    var(--primary),
-    rgb(69, 101, 0),
-    var(--secondary)
-  );
+ background: url("./img/Rect\ Light\ \(1\).svg") no-repeat center;
+ background-size: cover;
   display: flex;
   padding: 50px 100px 100px 0;
 
@@ -123,8 +118,8 @@ main {
   width: 400px;
   min-height: 600px;
   background-color: white;
- 
   padding: 20px;
+  border: 1px solid var(--primary);
 }
 
 h2 {
@@ -153,7 +148,7 @@ fieldset {
 fieldset label {
   display: block;
   font: normal 1rem var(--poppins);
-  color: var(--primary);
+  color: black;
 }
 
 fieldset input {

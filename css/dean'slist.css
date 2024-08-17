@@ -111,7 +111,7 @@ main {
   width: 80%;
   height: 600px;
   background-color: white;
-  border: 1px solid var(--primary);
+  border: 3px solid black;
 }
 
 .search-bar-container {

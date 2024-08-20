@@ -69,7 +69,7 @@ h1 {
 
 #check:checked ~ .user-side-panel {
   width: 0;
-  border: 1px solid black;
+  box-shadow: none;
 }
 
 #check:checked ~ .grade-section > .first-year-grade-section {
@@ -169,11 +169,52 @@ tbody tr:nth-child(odd) {
   background-color: white;
   position: fixed;
   right: 0;
-  z-index: 777;
-  transition: width 0.3s ease;
+  box-shadow: 0 1px 3px var(--shadow);
+  transition: width 0.3s ease, box-shadow 0.3s ease;
 }
 
 .green-bg {
   height: 150px;
-  background-color: var(--light-green);
+  background-color: var(--primary);
 }
+
+.info-container {
+  width: 90%;
+  height: 100%;
+  margin: 50px auto 0;
+}
+
+.info-label {
+  font: normal 1rem var(--poppins);
+}
+
+
+.display-info {
+  width: 100%;
+  background-color: var(--cell-color);
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  font: normal 1rem var(--poppins);
+}
+
+button {
+  width: 100px;
+  margin: 50px 0 0;
+  padding: 7px;
+  display: block;
+  background-color: var(--secondary);
+  border: none;
+  font: normal 0.9rem var(--poppins);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #ffbb00;
+}
+
+button i {
+  padding-right: 5px;
+}
+

@@ -68,7 +68,7 @@ h1 {
 }
 
 #check:checked ~ .user-side-panel {
-  width: 0;
+  right: -100%;
   box-shadow: none;
 }
 
@@ -170,7 +170,7 @@ tbody tr:nth-child(odd) {
   position: fixed;
   right: 0;
   box-shadow: 0 1px 3px var(--shadow);
-  transition: width 0.3s ease, box-shadow 0.3s ease;
+  transition: right 0.3s ease-in-out, box-shadow 0.3s ease;
 }
 
 .green-bg {
@@ -187,7 +187,6 @@ tbody tr:nth-child(odd) {
 .info-label {
   font: normal 1rem var(--poppins);
 }
-
 
 .display-info {
   width: 100%;
@@ -218,3 +217,76 @@ button i {
   padding-right: 5px;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /** Main Section */
+  .first-year-grade-section {
+    padding-right: 0;
+  }
+
+  .table-container {
+    width: 90%;
+    border: 1px solid black;
+  }
+
+  .user-side-panel {
+    width: 80%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .first-year-grade-section {
+    padding-right: 0;
+  }
+
+  .table-container {
+    width: 90%;
+    border: 1px solid black;
+  }
+
+  .user-side-panel {
+    width: 50%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .first-year-grade-section {
+    padding-right: 300px;
+  }
+
+  .table-container {
+    width: 90%;
+    border: 1px solid black;
+  }
+
+  .user-side-panel {
+    width: 300px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .first-year-grade-section {
+    padding-right: 300px;
+  }
+
+  .table-container {
+    width: 90%;
+    border: 1px solid black;
+  }
+
+  .user-side-panel {
+    width: 300px;
+  }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .table-container {
+    width: 900px;
+    border: 1px solid black;
+  }
+}

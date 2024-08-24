@@ -109,7 +109,7 @@ main {
 
 .table-container {
   width: 900px;
-  height: 500px;
+  height: 550px;
   background-color: white;
   margin: 50px 0;
   overflow-y: auto;
@@ -197,7 +197,7 @@ tbody tr:nth-child(odd) {
   font: normal 1rem var(--poppins);
 }
 
-button {
+.logout {
   width: 100px;
   margin: 50px 0 0;
   padding: 7px;
@@ -208,17 +208,22 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+.logout:hover {
   cursor: pointer;
   background-color: #ffbb00;
 }
 
-button i {
+.logout i {
   padding-right: 5px;
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  /** Navigation Bar */
+  nav {
+    padding-right: 20px;
+  }
+
   /** Main Section */
   .first-year-grade-section {
     padding-right: 0;
@@ -242,7 +247,7 @@ button i {
 
   .table-container {
     width: 90%;
-    border: 1px solid black;
+    border: 3px solid black;
   }
 
   .user-side-panel {
@@ -258,7 +263,6 @@ button i {
 
   .table-container {
     width: 90%;
-    border: 1px solid black;
   }
 
   .user-side-panel {
@@ -274,7 +278,6 @@ button i {
 
   .table-container {
     width: 90%;
-    border: 1px solid black;
   }
 
   .user-side-panel {
@@ -282,11 +285,9 @@ button i {
   }
 }
 
-
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .table-container {
-    width: 900px;
-    border: 1px solid black;
+    width: 80%;
   }
 }

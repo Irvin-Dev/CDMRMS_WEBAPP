@@ -16,7 +16,7 @@ if(isset($_POST["login_btn"])){
   $row = $result->fetch_assoc();
   $total = $result->num_rows;
   if($total > 0) {
-    echo '<script>alert("Credential match!");</script>';
+    echo '<script>alert("Welcome!");</script>';
     $_SESSION['StudentName'] = $row['Student Name'];
     $_SESSION['StudentID'] = $row['Student ID'];
     $_SESSION['Program'] = $row['Program'];
@@ -31,7 +31,7 @@ if(isset($_POST["login_btn"])){
     $total = $resultview->num_rows;
 
     if($total > 0){
-        echo '<script>alert("Credential match! ");</script>';
+        echo '<script>alert("Welcome! ");</script>';
         $_SESSION['StudentName'] = $row['Student Name'];
         $_SESSION['StudentID'] = $row['Student ID'];
         $_SESSION['Program'] = $row['Program'];

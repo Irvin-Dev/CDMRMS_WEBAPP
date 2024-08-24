@@ -1,11 +1,11 @@
 <?php 
-
 function logout(){
-session_unset();
+session_start();
+$_SESSION = array();
 session_destroy();
 
-echo '
-<script>
+echo 
+'<script>
 alert("Logout");
 window.location.href = "./index.php";
 </script>';

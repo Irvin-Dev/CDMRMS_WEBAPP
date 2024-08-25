@@ -133,6 +133,8 @@ main {
 #search-btn {
   cursor: pointer;
   padding: 5px 10px;
+  width: 50px;
+  border-radius: 5px;
   color: white;
   background-color: var(--primary);
   border: none;
@@ -156,8 +158,10 @@ main {
   width: 90%;
   height: 480px;
   background-color: white;
-  border: 1px solid var(--primary);
+ 
+  box-shadow: 0 1px 3px var(--shadow);
   overflow-y: auto;
+  border-radius: 5px;
 }
 
 caption {
